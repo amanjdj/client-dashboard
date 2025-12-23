@@ -4,9 +4,9 @@ function UsersTable({ users }) {
   const navigate = useNavigate();
 
   return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full border rounded-lg">
-        <thead className="bg-gray-100">
+    <div className="bg-white border rounded-lg shadow-sm overflow-x-auto">
+      <table className="min-w-full">
+        <thead className="bg-gray-100 text-sm text-gray-700">
           <tr>
             <th className="text-left p-3">Name</th>
             <th className="text-left p-3">Email</th>
@@ -18,12 +18,14 @@ function UsersTable({ users }) {
             <tr
               key={user.id}
               onClick={() => navigate(`/users/${user.id}`)}
-              className="cursor-pointer hover:bg-gray-50 transition"
+              className="border-t cursor-pointer hover:bg-gray-50 transition"
             >
-              <td className="p-3">{user.name}</td>
-              <td className="p-3">{user.email}</td>
-              <td className="p-3">
-                <span className="text-green-600 font-medium">Active</span>
+              <td className="p-4 font-medium">{user.name}</td>
+              <td className="p-4 text-gray-600">{user.email}</td>
+              <td className="p-4">
+                <span className="inline-block px-2 py-1 text-xs rounded bg-green-100 text-green-700 ">
+                  Active
+                </span>
               </td>
             </tr>
           ))}

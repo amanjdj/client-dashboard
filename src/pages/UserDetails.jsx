@@ -30,13 +30,13 @@ function UserDetails() {
   if (error) return <ErrorState message={error} />;
 
   return (
-    <div className="p-6 max-w-xl mx-auto">
+    <div className="p-4 md:p-8 max-w-xl mx-auto">
       <Link to="/" className="text-blue-600 text-sm mb-4 inline-block">
         ⬅️ Back to Dashboard
       </Link>
       <h2 className="text-2xl font-semibold mb-4">User Details</h2>
 
-      <div className="space-y-2 bg-white p-4 border rounded-lg">
+      <div className="space-y-2 bg-white p-6 border rounded-lg shadow-sm">
         <p>
           <strong>Name:</strong> {user.name}
         </p>

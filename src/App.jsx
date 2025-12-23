@@ -6,10 +6,12 @@ import UserDetails from "./pages/UserDetails";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/users/:id" element={<UserDetails />} />
-      </Routes>
+      <div className="min-h-screen bg-gray-50">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/users/:id" element={<UserDetails />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

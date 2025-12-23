@@ -12,8 +12,11 @@ function Dashboard() {
   if (users.length === 0) return <EmptyState />;
 
   return (
-    <div className="p-6">
-      <h1 className="text-xl font-semibold">Client Dashboard</h1>
+    <div className="p-4 md:p-8 max-w-6xl mx-auto">
+      <h1 className="text-xl md:text-3xl font-semibold mb-2">
+        Client Dashboard
+      </h1>
+      <p className="text-gray-600 mb-6">Manage and view client information</p>
       <UsersTable users={users} />
     </div>
   );
