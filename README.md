@@ -1,16 +1,49 @@
-# React + Vite
+# Mini Client Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend-focused mini SaaS-style client dashboard built using React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Users dashboard with list view
+- User details page
+- Loading, error, and empty states
+- Client-side search by name and email
+- Responsive UI (mobile & desktop)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (Vite)
+- React Router
+- Tailwind CSS
+- Fetch API
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+pnpm install
+pnpm run dev
+```
+
+## Approach & Decisions
+
+Used functional components and React hooks
+
+Separated API logic into service files
+
+Implemented a custom hook for data fetching and state handling
+
+Created reusable UI components for common states
+
+Focused on clean UI, responsiveness, and user experience
+
+## Assumptions
+
+User status is mocked as "Active" since the API does not provide status
+
+API is read-only
+
+## Improvements With More Time
+
+Skeleton loaders
+
+Pagination
